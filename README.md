@@ -1,0 +1,1 @@
+# open-all-urls-in-the-clipboard
