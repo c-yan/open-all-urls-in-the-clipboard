@@ -1,5 +1,4 @@
 'use strict';
-
 (() => {
     const MENU_ITEM_ID = 'open-urls-in-clipboard';
 
@@ -27,13 +26,13 @@
         return browser.tabs.executeScript({ file: 'paste-from-clipboard.js' }).catch(console);
     }
 
-    function onOpenClipboardUrls(info, tab) {
+    function onOpenUrlsInClipboard(info, tab) {
         pasteFromClipboardWrapper().then((result) => {
             openUrlsInText(result[0]);
         });
     };
 
     browser.menus.onClicked.addListener((info, tab) => {
-        if (info.menuItemId == MENU_ITEM_ID) onOpenClipboardUrls(info, tab);
+        if (info.menuItemId == MENU_ITEM_ID) onOpenUrlsInClipboard(info, tab);
     });
 })();
