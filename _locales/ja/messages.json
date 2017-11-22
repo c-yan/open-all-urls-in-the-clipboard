@@ -1,0 +1,14 @@
+{
+    "extensionName": {
+        "message": "Open all URLs in the clipboard",
+        "description": "Name of the extension."
+    },
+    "extensionDescription": {
+        "message": "クリップボードにある全ての URL を開く.",
+        "description": "Description of the extension."
+    },
+    "menuItemTitle": {
+        "message": "クリップボードにある全ての URL を開く",
+        "description": "Title of the menu item."
+    }
+}

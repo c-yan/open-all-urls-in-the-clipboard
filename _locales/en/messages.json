@@ -1,0 +1,14 @@
+{
+    "extensionName": {
+        "message": "Open all URLs in the clipboard",
+        "description": "Name of the extension."
+    },
+    "extensionDescription": {
+        "message": "Open all URLs in the clipboard.",
+        "description": "Description of the extension."
+    },
+    "menuItemTitle": {
+        "message": "Open all URLs in the clipboard",
+        "description": "Title of the menu item."
+    }
+}

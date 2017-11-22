@@ -1,1 +1,4 @@
-# open-all-urls-in-the-clipboard
+# Open all URLs in the clipboard
+
+This is a WebExtensions.
+Only tested with Firefox 57.
