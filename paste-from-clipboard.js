@@ -1,6 +1,6 @@
 'use strict';
 (() => {
-    var result;
+    var result = null;
     function onPaste(event) {
         document.removeEventListener('paste', onPaste, true);
         event.stopImmediatePropagation();

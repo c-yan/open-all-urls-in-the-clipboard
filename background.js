@@ -28,7 +28,7 @@
         pasteFromClipboardWrapper().then((result) => {
             openUrlsInText(result[0]);
         });
-    };
+    }
 
     browser.menus.onClicked.addListener((info, tab) => {
         if (info.menuItemId == MENU_ITEM_ID) onOpenUrlsInClipboard(info, tab);
