@@ -2,8 +2,6 @@
 (() => {
     const MENU_ITEM_ID = 'open-urls-in-clipboard';
 
-    browser.menus.create({ id: MENU_ITEM_ID, title: browser.i18n.getMessage("menuItemTitle"), contexts: ['page', 'tools_menu'] });
-
     function openTabs(urls) {
         for (var u of urls) browser.tabs.create({ url: u });
     }
@@ -35,4 +33,6 @@
     browser.menus.onClicked.addListener((info, tab) => {
         if (info.menuItemId == MENU_ITEM_ID) onOpenUrlsInClipboard(info, tab);
     });
+
+    browser.menus.create({ id: MENU_ITEM_ID, title: browser.i18n.getMessage("menuItemTitle"), contexts: ['page', 'tools_menu'] });
 })();
