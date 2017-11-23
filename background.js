@@ -21,7 +21,7 @@
     }
 
     function pasteFromClipboardWrapper() {
-        return browser.tabs.executeScript({ file: 'paste-from-clipboard.js' }).catch(console);
+        return browser.tabs.executeScript({ file: 'paste-from-clipboard.js' }).catch(console.log);
     }
 
     function onOpenUrlsInClipboard(info, tab) {
