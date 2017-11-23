@@ -25,7 +25,7 @@
     }
 
     function onOpenUrlsInClipboard(info, tab) {
-        pasteFromClipboardWrapper().then((result) => {
+        pasteFromClipboardWrapper().then(result => {
             openUrlsInText(result[0]);
         });
     }
