@@ -3,18 +3,18 @@
     const MENU_ITEM_ID = 'open-urls-in-clipboard';
 
     function openTabs(urls) {
-        for (var u of urls) browser.tabs.create({ url: u });
+        for (const u of urls) browser.tabs.create({ url: u });
     }
 
     function openUrlsInText(text) {
         if (text == null) return;
 
-        var urls = [];
-        for (var l of text.split('\n')) {
-            var m = l.match(/(https?:\/\/[^>\s]+)/g);
+        let urls = [];
+        for (const l of text.split('\n')) {
+            const m = l.match(/(https?:\/\/[^>\s]+)/g);
             if (m == null) continue;
 
-            for (var u of m) urls.push(u);
+            for (const u of m) urls.push(u);
         }
 
         openTabs(urls);
