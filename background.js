@@ -20,14 +20,13 @@
         openTabs(urls);
     }
 
-    function pasteFromClipboardWrapper() {
+    async function pasteFromClipboardWrapper() {
         return browser.tabs.executeScript({ file: 'paste-from-clipboard.js' }).catch(console.log);
     }
 
-    function onOpenUrlsInClipboard(info, tab) {
-        pasteFromClipboardWrapper().then(result => {
-            openUrlsInText(result[0]);
-        });
+    async function onOpenUrlsInClipboard(info, tab) {
+        const result = await pasteFromClipboardWrapper();
+        openUrlsInText(result[0]);
     }
 
     browser.menus.onClicked.addListener((info, tab) => {

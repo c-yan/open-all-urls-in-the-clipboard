@@ -8,5 +8,8 @@ module.exports = {
     "rules": {
         "no-unused-vars": ["error", { "vars": "all", "args": "none" }],
         "no-console": "off"
+    },
+    "parserOptions": {
+        "ecmaVersion": 2017
     }
 };
