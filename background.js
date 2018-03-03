@@ -21,17 +21,17 @@
     }
 
     async function pasteFromClipboardWrapper() {
-        return browser.tabs.executeScript({ file: 'paste-from-clipboard.js' }).catch(console.log);
+        return browser.tabs.executeScript({ file: 'paste-from-clipboard.js' });
     }
 
     async function onOpenUrlsInClipboard(info, tab) {
-        const result = await pasteFromClipboardWrapper();
-        openUrlsInText(result[0]);
+        const text = (await pasteFromClipboardWrapper())[0];
+        openUrlsInText(text);
     }
 
     browser.menus.onClicked.addListener((info, tab) => {
         if (info.menuItemId == MENU_ITEM_ID) onOpenUrlsInClipboard(info, tab);
     });
 
-    browser.menus.create({ id: MENU_ITEM_ID, title: browser.i18n.getMessage("menuItemTitle"), contexts: ['page', 'tools_menu'] });
+    browser.menus.create({ id: MENU_ITEM_ID, title: browser.i18n.getMessage('menuItemTitle'), contexts: ['page', 'tools_menu'] });
 })();
