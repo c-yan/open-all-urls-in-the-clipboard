@@ -2,12 +2,13 @@
     "manifest_version": 2,
     "name": "__MSG_extensionName__",
     "description": "__MSG_extensionDescription__",
-    "version": "1.0.2",
+    "version": "1.1.0",
     "homepage_url": "https://github.com/c-yan/open-all-urls-in-the-clipboard",
     "default_locale": "en",
     "applications": {
         "gecko": {
-            "strict_min_version": "57.0"
+            "id": "{ada2fe27-1a39-4a43-9174-7b86bfb37b3e}",
+            "strict_min_version": "60.0"
         }
     },
     "background": {
@@ -15,10 +16,18 @@
             "background.js"
         ]
     },
+    "commands": {
+        "open-urls-in-clipboard": {}
+    },
+    "options_ui": {
+        "page": "options/options.html",
+        "browser_style": true
+    },
     "permissions": [
         "activeTab",
         "tabs",
         "menus",
-        "clipboardRead"
+        "clipboardRead",
+        "storage"
     ]
 }
