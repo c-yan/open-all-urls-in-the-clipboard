@@ -48,7 +48,7 @@
     });
     browser.menus.create({ id: COMMAND_ID, title: browser.i18n.getMessage('menuItemTitle'), contexts: ['page', 'tools_menu'] });
 
-    browser.commands.onCommand.addListener((command) => {
+    browser.commands.onCommand.addListener(command => {
         if (command == COMMAND_ID) onOpenUrlsInClipboard();
     });
     updateShortcut();
