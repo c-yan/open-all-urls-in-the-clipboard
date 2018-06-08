@@ -30,12 +30,12 @@
     }
 
     async function getShortcut() {
-        return (await browser.storage.sync.get()).shortcut || "";
+        return (await browser.storage.sync.get()).shortcut || '';
     }
 
     async function updateShortcut() {
         const shortcut = await getShortcut();
-        if (shortcut == "") return;
+        if (shortcut == '') return;
 
         browser.commands.update({
             name: COMMAND_ID,

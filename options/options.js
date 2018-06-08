@@ -8,7 +8,7 @@
     }
 
     async function getShortcut() {
-        return (await browser.storage.sync.get()).shortcut || "";
+        return (await browser.storage.sync.get()).shortcut || '';
     }
 
     async function restoreOptions() {
