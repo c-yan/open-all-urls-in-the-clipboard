@@ -11,7 +11,7 @@
 
         let urls = [];
         for (const l of text.split('\n')) {
-            const m = l.match(/(https?:\/\/[^>\s]+)/g);
+            const m = l.match(/https?:\/\/[^>\s]+/g);
             if (m == null) continue;
 
             for (const u of m) urls.push(u);
